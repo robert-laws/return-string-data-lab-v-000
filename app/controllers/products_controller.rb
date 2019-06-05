@@ -6,4 +6,9 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
   end
+
+  def description
+    product = Product.find(params[:id])
+    render plain: product.description
+  end
 end
